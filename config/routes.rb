@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 root 'pages#home'
 get 'about', to: 'pages#about'
 
+resources :articles
+
+
 #get 'pages/home', to: 'Pages#home'
 #get 'pages/about', to: 'pages#about'
 
