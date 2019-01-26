@@ -45,6 +45,7 @@ class ArticlesController < ApplicationController
         flash[:notice] = "The article has been deleted!" 
         redirect_to articles_path
       end
+      
     private
         def set_article
             @article = Article.find(params[:id])
