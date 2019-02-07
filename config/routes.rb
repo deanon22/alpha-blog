@@ -6,7 +6,8 @@ get 'about', to: 'pages#about'
 
 resources :articles
 
-
+get 'signup', to: 'users#new'
+resources :users, except: [:new]
 #get 'pages/home', to: 'Pages#home'
 #get 'pages/about', to: 'pages#about'
 
