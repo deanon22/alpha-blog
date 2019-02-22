@@ -4,7 +4,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
     def setup
         @category =  Category.create(name: "sports")     
-        @user === User.create(username: "john", email: "john@example.com", password: "password", admin: true)
+        @user = User.create(username: "john", email: "john@example.com", password: "password", admin: true)
     end
 
     test "should get categories index" do
@@ -21,7 +21,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "should get show " do
-                get categories_path(@category)
+        get categories_path(@category)
         assert_response :success
     end
 
